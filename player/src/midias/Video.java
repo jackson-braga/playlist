@@ -1,4 +1,6 @@
 package midias;
 
-public class Video {
+import interfaces.IMidia;
+
+public class Video implements IMidia {
 }

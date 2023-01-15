@@ -7,8 +7,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlayListMusic implements IPlayList<Musica> {
+    private String nome;
     private String genero;
+
     private List<Musica> musicas = new ArrayList<>();
+
+    public PlayListMusic(String nome, String genero) {
+        this.nome = nome;
+        this.genero = genero;
+    }
 
     @Override
     public void add(Musica musica) {
@@ -20,9 +27,17 @@ public class PlayListMusic implements IPlayList<Musica> {
         return musicas.get(0);
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
     @Override
     public void delete(Musica musica) {
-
+        musicas.remove(musica);
     }
 
     @Override

@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface IPlayList<T> {
+public interface IPlayList<T extends IMidia> {
 
     void add(T t);
     T get();
