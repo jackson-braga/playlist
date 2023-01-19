@@ -1,4 +1,4 @@
-package midias;
+package playlist.midias;
 
 public class PodCast {
 }
