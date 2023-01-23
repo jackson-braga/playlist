@@ -2,7 +2,7 @@ package playlist.interfaces;
 
 import java.util.List;
 
-public interface IPlayList<T extends IMidia> {
+public interface IPlayList<T extends IMidia> extends INome {
 // Fazer o contrele de uma lista de musicas, videos, playlist.midias .....
     void add(T t);
 

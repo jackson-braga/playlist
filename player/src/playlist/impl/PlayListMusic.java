@@ -1,18 +1,17 @@
 package playlist.impl;
 
+import playlist.interfaces.IMusica;
 import playlist.interfaces.IPlayList;
-import playlist.midias.Musica;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
-public class PlayListMusic implements IPlayList<Musica>, Comparator {
+public class PlayListMusic implements IPlayList<IMusica> {
     private String nome;
     private String genero;
     private int idxAtual;
 
-    private List<Musica> musicas = new ArrayList<>();
+    private List<IMusica> musicas = new ArrayList<>();
 
     public PlayListMusic(String nome, String genero) {
         this.nome = nome;
@@ -20,28 +19,28 @@ public class PlayListMusic implements IPlayList<Musica>, Comparator {
     }
 
     @Override
-    public void add(Musica musica) {
+    public void add(IMusica musica) {
         musicas.add(musica);
     }
 
     @Override
-    public void delete(Musica musica) {
+    public void delete(IMusica musica) {
         musicas.remove(musica);
     }
 
     @Override
-    public Musica anterior() {
+    public IMusica anterior() {
         idxAtual--;
         return atual();
     }
 
     @Override
-    public Musica atual() {
+    public IMusica atual() {
         return musicas.get(idxAtual);
     }
 
     @Override
-    public Musica proximo() {
+    public IMusica proximo() {
         idxAtual++;
         return atual();
     }
@@ -57,10 +56,5 @@ public class PlayListMusic implements IPlayList<Musica>, Comparator {
 
     public String getGenero() {
         return genero;
-    }
-
-    @Override
-    public int compare(Object o1, Object o2) {
-        return 0;
     }
 }

@@ -1,7 +1,6 @@
 package playlist.interfaces;
 
-public interface IMidia {
-    String getNome();
+public interface IMidia extends INome {
     String getLocal();
     String getGenero();
 }

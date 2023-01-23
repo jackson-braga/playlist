@@ -1,4 +1,4 @@
 package playlist.midias;
 
-public class PodCast {
+public class PodCast extends Midia{
 }

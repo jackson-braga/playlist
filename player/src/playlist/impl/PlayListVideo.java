@@ -35,4 +35,9 @@ public class PlayListVideo implements IPlayList<Video> {
     public List<String> getFila() {
         return null;
     }
+
+    @Override
+    public String getNome() {
+        return null;
+    }
 }
