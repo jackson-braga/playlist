@@ -5,6 +5,7 @@ import playlist.interfaces.IPlayList;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PlayListHibrido implements IPlayList<IMidia> {
     private int idxAtual;
@@ -44,7 +45,7 @@ public class PlayListHibrido implements IPlayList<IMidia> {
 
     @Override
     public List<String> getFila() {
-        return midias.stream().map(midia -> midia.getNome()).toList();
+        return midias.stream().map(midia -> midia.getNome()).collect(Collectors.toList());
     }
 
     @Override
