@@ -45,7 +45,7 @@ public class PlayListHibrido implements IPlayList<IMidia> {
 
     @Override
     public List<String> getFila() {
-        return midias.stream().map(midia -> midia.getNome()).collect(Collectors.toList());
+        return midias.stream().map(m -> m.getNome()).collect(Collectors.toList());
     }
 
     @Override
